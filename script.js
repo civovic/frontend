@@ -119,8 +119,8 @@ function registerUser() {
       },
       body: JSON.stringify(user),
     })
-      .then(function (response) {
-        console(response);
+      .then(function (response) { 
+        console.log(response)       
         if (response.ok) {
           // Registration successful
           alert("Registration successful!");
