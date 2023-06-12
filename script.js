@@ -95,7 +95,7 @@ function registerUser() {
     // Create user object
     var user = {
       mobile_phone_number: phoneNumber,
-      firts_name: firstName,
+      first_name: firstName,
       last_name: lastName,
       email: email
     };
@@ -113,13 +113,14 @@ function registerUser() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-        'Access-Control-Allow-Methods': '*',
+        // 'Access-Control-Allow-Origin': '*',
+        // 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+        // 'Access-Control-Allow-Methods': '*',
       },
       body: JSON.stringify(user),
     })
       .then(function (response) {
+        console(response);
         if (response.ok) {
           // Registration successful
           alert("Registration successful!");
