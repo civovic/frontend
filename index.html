@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header id="registrationHeader">Registration</header>
+      <form action="javascript:validateForm()" class="form">
+        <div class="input-box">          
+          <input id="phonenumber" type="text" placeholder="Mobile number" pattern="^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$" required />
+        </div>
+
+        <div class="input-box">          
+          <input id="firstName" type="text" placeholder="First name" required />
+        </div>
+
+        <div class="input-box">          
+          <input id="lastName" type="text" placeholder="Last name" required />
+        </div>
+        
+        <div class="input-box birtdate">          
+          <label>Date of Birth</label>
+        </div>
+        <div class="column">          
+          <!-- <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" />
+          </div> -->          
+          <div class="select-box">            
+            <select id="selectMonth">
+              <option hidden>Month</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </div>
+          <div class="select-box">            
+            <select id="selectDate">
+              <option hidden>Date</option>              
+            </select>
+          </div>
+          <div class="select-box">            
+            <select id="selectYear">
+              <option hidden>Year</option>
+            </select>
+          </div>    
+        </div>
+        <div class="gender-box">          
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" value="M" />
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" value="F"/>
+              <label for="check-female">Female</label>
+            </div>            
+          </div>
+        </div>
+        <div class="input-box">          
+          <input id="email" type="email" placeholder="Email" required />
+        </div>        
+        <button id="registerBtn">Register</button>
+      </form>      
+    </section>    
+    <footer id="footerSection">
+      <p>FOOTER</p>
+      <div class="login-popup" id="loginPopup">      
+        <button class="footerButton" onclick="closeLoginPopup()">Login</button>
+      </div>      
+    </footer>    
+    <script src="script.js"></script>
+  </body>
+</html>
